@@ -11,6 +11,16 @@ echo Installing packages | tee -a $log
 	#sudo apt-get -y install octave evince
 echo Completed package installation | tee -a $log
 
+echo Getting MATLAB Runtime install files | tee -a $log
+wget -q -O MCR_R2015a_glnxa64_installer.zip "http://au.mathworks.com/supportfiles/downloads/R2015a/deployment_files/R2015a/installers/glnxa64/MCR_R2015a_glnxa64_installer.zip"
+
+echo Getting the Barzel et al uncompiled code from git | tee -a $log 
+mkdir barzel_et_al_2013
+git clone https://github.com/baruchbarzel/NatureBiotech-31-720.git barzel_et_al_2013/code
+
+echo Getting the Barzel et al compiled code from git | tee -a $log
+cp -R /vagrant/data/barzel_et_al_2013/* -t barzel_et_al_2013/
+
 echo Getting code | tee -a $log
 	#git clone https://github.com/uomsystemsbiology/hbgm.git ~/gawcurcra15/Examples
 	#echo Getting build info from git | tee -a $log
