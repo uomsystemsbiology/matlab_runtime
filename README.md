@@ -1,6 +1,6 @@
 ### What is this? 
 This it the template for the MATLAB Runtime Reference environment.  This environment contains a set of scripts
-which install the MATLAB Compiler Runtime for execution of compiled MATLAB code
+which install the MATLAB Compiler Runtime for execution of compiled MATLAB code.
 
 ### How do I use it?
 
