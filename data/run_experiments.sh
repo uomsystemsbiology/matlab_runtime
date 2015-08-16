@@ -8,19 +8,14 @@
 log=/vagrant/temp/run_experiments.log
 
 # Change to project directory
-#cd /home/sbl/gawcurcra15/Examples
+#cd /home/sbl
 
-echo Copying the Barzel et al compiled code into the project directory | tee -a $log
-cp -v -R /home/sbl/barzel_et_al_2013/compiled/SupplementarySoftware2/* -t /home/sbl/barzel_et_al_2013/code/SupplementarySoftware2
-cp -v -R /home/sbl/barzel_et_al_2013/compiled/SupplementarySoftware3/* -t /home/sbl/barzel_et_al_2013/code/SupplementarySoftware3 
+echo To use compiled MATLAB code you may need to copy it into a specific \nproject directory | tee -a $log
 
-#echo Executing SupplementaryScripts2 | tee -a $log
-#cd /home/sbl/barzel_et_al_2013/code/SupplementarySoftware2
-#./run_RUN.sh /usr/local/MATLAB/MATLAB_Runtime/v85
-
-echo Executing SupplementaryScripts3 | tee -a $log
-cd /home/sbl/barzel_et_al_2013/code/SupplementarySoftware3
-./run_RUN.sh /usr/local/MATLAB/MATLAB_Runtime/v85
+echo "Then cd into the project directory and execute the code" | tee -a $log
+echo "using a syntax like: \n./RUN.sh /usr/local/MATLAB/MATLAB_Runtime/v85" | tee -a $log
+echo "Note that the execution directory often has to be the code directory" | tee -a $log
+echo "so you will need to CD into it before execution" | tee -a $log
 
 #sleep 2
 #./Make 2>&1 | tee -a $log
