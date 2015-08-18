@@ -10,10 +10,11 @@ log=/vagrant/temp/run_experiments.log
 # Change to project directory
 #cd /home/sbl
 
-echo To use compiled MATLAB code you may need to copy it into a specific \nproject directory | tee -a $log
+echo Executing a sample shell script| tee -a $log
+echo To use compiled MATLAB code you may need to copy it into a specific project directory | tee -a $log
 
 echo "Then cd into the project directory and execute the code" | tee -a $log
-echo "using a syntax like: \n./RUN.sh /usr/local/MATLAB/MATLAB_Runtime/v85" | tee -a $log
+echo "using a syntax like: ./RUN.sh /usr/local/MATLAB/MATLAB_Runtime/v85" | tee -a $log
 echo "Note that the execution directory often has to be the code directory" | tee -a $log
 echo "so you will need to CD into it before execution" | tee -a $log
 
